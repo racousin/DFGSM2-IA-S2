@@ -1,6 +1,6 @@
 # L2 Data Science & Text Mining — Practicals
 
-Course for L2 Math students (35 students). 6 sessions + 1 project.
+Course for L2 Math students 6 sessions + 1 project.
 
 ## Structure
 
