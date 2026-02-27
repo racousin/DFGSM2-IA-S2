@@ -2,6 +2,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
 
 
 def plot_gradient_descent_1d(f, theta_history, theta_range=(-5, 10), title="Gradient Descent"):
@@ -155,6 +156,84 @@ def plot_gradient_step(theta_before, theta_after, gradient, learning_rate, f, th
     ax.set_title(f'Gradient Step: \u03b8_new = \u03b8 - lr \u00d7 gradient = {theta_before:.3f} - {learning_rate} \u00d7 {gradient:.3f} = {theta_after:.3f}',
                 fontsize=12)
     ax.legend(loc='upper right')
+    ax.grid(True, alpha=0.3)
+
+    plt.tight_layout()
+    return fig
+
+
+def plot_decision_boundary_2d(model, X, y, title="Decision Boundary", ax=None):
+    """
+    Plot 2D decision boundary with scatter points colored by class.
+
+    Args:
+        model: Fitted sklearn classifier with a predict method
+        X: Input features of shape (n_samples, 2)
+        y: Target labels
+        title: Plot title
+        ax: Optional matplotlib axes. If None, creates a new figure.
+
+    Returns:
+        ax: The matplotlib axes used for plotting
+    """
+    if ax is None:
+        fig, ax = plt.subplots(figsize=(8, 6))
+
+    cmap_light = ListedColormap(["#FFAAAA", "#AAAAFF", "#AAFFAA"])
+    cmap_bold = ListedColormap(["#FF0000", "#0000FF", "#00AA00"])
+
+    h = 0.02
+    x_min, x_max = X[:, 0].min() - 0.5, X[:, 0].max() + 0.5
+    y_min, y_max = X[:, 1].min() - 0.5, X[:, 1].max() + 0.5
+    xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
+                         np.arange(y_min, y_max, h))
+
+    Z = model.predict(np.c_[xx.ravel(), yy.ravel()])
+    Z = Z.reshape(xx.shape)
+
+    ax.contourf(xx, yy, Z, alpha=0.3, cmap=cmap_light)
+    ax.contour(xx, yy, Z, colors='k', linewidths=0.5, alpha=0.5)
+    ax.scatter(X[:, 0], X[:, 1], c=y, cmap=cmap_bold, edgecolors='k',
+               s=30, linewidths=0.5)
+
+    ax.set_xlim(xx.min(), xx.max())
+    ax.set_ylim(yy.min(), yy.max())
+    ax.set_title(title, fontsize=13)
+    ax.set_xlabel("Feature 1", fontsize=11)
+    ax.set_ylabel("Feature 2", fontsize=11)
+
+    return ax
+
+
+def plot_coefficient_path(alphas, coefs, feature_names=None, title="Coefficient Path"):
+    """
+    Plot coefficient values vs regularization strength.
+
+    Args:
+        alphas: Array of regularization parameter values
+        coefs: Array of shape (n_alphas, n_features) with coefficient values
+        feature_names: Optional list of feature names
+        title: Plot title
+
+    Returns:
+        fig: The matplotlib figure
+    """
+    fig, ax = plt.subplots(figsize=(10, 5))
+
+    n_features = coefs.shape[1]
+    colors = plt.cm.tab10(np.linspace(0, 1, min(n_features, 10)))
+
+    for i in range(n_features):
+        label = feature_names[i] if feature_names is not None else f"Feature {i}"
+        ax.plot(alphas, coefs[:, i], linewidth=2, label=label,
+                color=colors[i % len(colors)])
+
+    ax.set_xscale("log")
+    ax.set_xlabel(r"Regularization strength $\alpha$", fontsize=12)
+    ax.set_ylabel("Coefficient value", fontsize=12)
+    ax.set_title(title, fontsize=14)
+    ax.axhline(y=0, color='k', linestyle='--', linewidth=0.5, alpha=0.5)
+    ax.legend(loc="best", fontsize=9)
     ax.grid(True, alpha=0.3)
 
     plt.tight_layout()

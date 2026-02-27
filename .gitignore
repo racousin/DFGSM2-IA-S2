@@ -18,3 +18,5 @@ build/
 
 
 .ipynb_checkpoints/
+
+l2math/__pycache__/
