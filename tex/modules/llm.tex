@@ -1,0 +1,277 @@
+\section{Large Language Models}
+
+\begin{frame}{Les Large Language Models (LLM)}
+
+\textbf{Qu'est-ce qu'un LLM ?}
+\begin{itemize}
+    \item Non programmé avec des règles de grammaire
+    \item Entraîné en lisant des milliards de textes (livres, sites web...)
+    \item \textbf{Tâche principale :} \textcolor{red}{prédire} le mot suivant
+    \item L'échelle compte : des milliards de paramètres
+\end{itemize}
+
+\vspace{0.5cm}
+
+\onslide<2>
+\textbf{De l'autocomplétion à la conversation :}
+\begin{itemize}
+    \item Modèle de base = autocomplétion performante
+    \item Ajustement d'instructions = apprendre à suivre des demandes
+    \item RLHF = apprendre à être utile grâce aux retours humains
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Ce que les LLM peuvent et ne peuvent pas faire}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+    \colormark{blue}\textbf{Capacités :}
+    \begin{itemize}
+        \item Reconnaître des patterns
+        \item Générer du texte cohérent
+        \item Raisonner sur du texte
+        \item Résumer, traduire, reformuler
+        \item Créer du contenu
+    \end{itemize}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+    \onslide<2>
+    \colorwarning{red}\textbf{Limites :}
+    \begin{itemize}
+        \item Pas de vraie compréhension
+        \item Faits non fiables
+        \item Pas d'info en temps réel
+        \item Imprécisions
+    \end{itemize}
+\end{column}
+\end{columns}
+
+\vspace{0.5cm}
+
+\textbf{Principe clé :} Toujours vérifier les informations critiques
+
+\end{frame}
+
+\begin{frame}{Pourquoi les LLM ont besoin d'aide}
+
+\textbf{Trois problèmes majeurs :}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+    \item<+-> \textbf{Ignorance des données spécifiques}
+        \begin{itemize}
+            \item Ne connaît pas les documents sur lesquels il n'a jamais vu
+            \item Ne sait rien des spécificités liées à une entreprise particulière
+        \end{itemize}
+    
+    \vspace{0.2cm}
+    \item<+-> \textbf{Date limite de connaissances}
+        \begin{itemize}
+            \item Entraîné sur des données jusqu'à une certaine date
+            \item Ignore les événements récents
+        \end{itemize}
+    
+    \vspace{0.2cm}
+    \item<+-> \textbf{Hallucinations}
+        \begin{itemize}
+            \item Invente des réponses plausibles quand il ne sait pas
+            \item Présente la fiction comme un fait
+        \end{itemize}
+\end{enumerate}
+
+\vspace{0.3cm}
+\onslide<3>
+\textbf{Solution :} Le RAG (Retrieval-Augmented Generation)
+
+\end{frame}
+
+\begin{frame}{RAG : Donner des documents au LLM}
+\framesubtitle{Retrieval-Augmented Generation}
+
+\textbf{Comment ça marche ?}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+    \item[\textbf{1.}] L'utilisateur pose une question
+    \item[\textbf{2.}] Le système cherche dans vos documents
+    \item[\textbf{3.}] Les passages pertinents sont donnés au LLM
+    \item[\textbf{4.}] Le LLM répond en se basant sur vos documents
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\textbf{Analogie :} Examen à livre ouvert
+
+\vspace{0.5cm}
+\onslide<2>
+\textbf{Avantages :}
+\begin{itemize}
+    \item Réponses basées sur des données spécifiques
+    \item Réduit les hallucinations
+    \item Sources vérifiables
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Pourquoi le RAG est important pour les entreprises}
+
+\textbf{Cas d'usage typiques :}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item<+-> \textbf{Chatbots d'entreprise}
+        \begin{itemize}
+            \item Support client basé sur documentation produit
+            \item Assistant RH pour les politiques internes
+        \end{itemize}
+
+    \item<+-> \textbf{Analyse documentaire à grande échelle}
+        \begin{itemize}
+            \item Recherche dans des milliers de contrats
+            \item Synthèse de rapports techniques
+        \end{itemize}
+
+    \item<+-> \textbf{Conformité et réglementation}
+        \begin{itemize}
+            \item Q\&A sur les procédures de sécurité
+            \item Vérification de conformité réglementaire
+        \end{itemize}
+\end{itemize}
+
+\vspace{0.3cm}
+\onslide<3>
+\textbf{Bénéfice clé :} Démocratiser l'accès à l'information spécialisée
+
+\end{frame}
+
+\begin{frame}{Agents IA : au-delà de la conversation}
+
+\textbf{Quelle différence ?}
+
+\vspace{0.3cm}
+
+\begin{tabular}{p{5cm}|p{5cm}}
+\textbf{Chatbot classique} & \textbf{Agent IA} \\
+\hline
+Répond aux questions & Exécute des tâches \\
+Conversation passive & Actions autonomes \\
+Une interaction à la fois & Planification multi-étapes \\
+Pas d'outils externes & Utilise calculatrice, web, APIs \\
+\end{tabular}
+
+\vspace{0.5cm}
+
+\textbf{Exemple :}
+\begin{itemize}
+    \item Chatbot : "Le train Paris-Lyon coûte environ 100€"
+    \item Agent : Cherche vols → Compare prix → Réserve → Envoie confirmation
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Composants d'un agent IA}
+
+\textbf{5 capacités essentielles :}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+    \item<+-> \textbf{Compréhension de l'objectif}
+        \begin{itemize}
+            \item Interpréter la demande de l'utilisateur
+            \item Identifier le résultat souhaité
+        \end{itemize}
+    
+    \item<+-> \textbf{Planification}
+        \begin{itemize}
+            \item Décomposer la tâche en étapes
+            \item Décider de l'ordre des actions
+        \end{itemize}
+    
+    \item<+-> \textbf{Utilisation d'outils}
+        \begin{itemize}
+            \item Calculatrice, recherche web, base de données
+            \item APIs externes (météo, réservation, etc.)
+        \end{itemize}
+    
+    \item<+-> \textbf{Mémoire}
+        \begin{itemize}
+            \item Garder le contexte de la conversation
+            \item Apprendre des interactions précédentes
+        \end{itemize}
+    
+    \item<+-> \textbf{Exécution et itération}
+        \begin{itemize}
+            \item Agir, observer le résultat, ajuster
+        \end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Défis des agents autonomes}
+
+\textbf{Limitations actuelles :}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item<+-> \textbf{Fiabilité}
+        \begin{itemize}
+            \item Erreurs possibles dans les tâches multi-étapes
+            \item Peut mal interpréter les instructions
+        \end{itemize}
+    
+    \item<+-> \textbf{Sécurité}
+        \begin{itemize}
+            \item Agents avec accès aux systèmes = risques
+            \item Besoin de contrôles et limites strictes
+        \end{itemize}
+    
+    \item<+-> \textbf{Coût}
+        \begin{itemize}
+            \item Nombreux appels au LLM = coûteux
+            \item Temps d'exécution parfois long
+        \end{itemize}
+    
+    \item<+-> \textbf{Transparence}
+        \begin{itemize}
+            \item Difficile de comprendre le raisonnement
+            \item Audit et explicabilité limités
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Synthèse : trois niveaux d'IA}
+
+\begin{table}
+\small
+\begin{tabular}{l|p{3.5cm}|p{3.5cm}}
+\textbf{Technologie} & \textbf{Fonction} & \textbf{Usage} \\
+\hline
+\textbf{LLM} & Comprendre et générer du texte & Rédaction, traduction, analyse \\
+\hline
+\textbf{RAG} & LLM + vos documents & Chatbot entreprise, recherche documentaire \\
+\hline
+\textbf{Agent} & RAG + actions autonomes & Automatisation de tâches complexes \\
+\hline
+\end{tabular}
+\end{table}
+
+\vspace{0.5cm}
+
+\textbf{Progression naturelle :}
+\begin{center}
+LLM → RAG → Agent
+\end{center}
+
+\vspace{0.3cm}
+
+Chaque niveau ajoute des capacités mais aussi des risques à gérer
+
+\end{frame}

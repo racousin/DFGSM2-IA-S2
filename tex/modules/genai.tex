@@ -1,0 +1,311 @@
+\section{Introduction à l'IA générative}
+
+\begin{frame}{Qu'est-ce que l'IA générative ?}
+
+\textbf{Définition}
+
+\vspace{0.3cm}
+
+L'IA générative est une branche de l'intelligence artificielle qui \textbf{crée de nouveaux contenus} (textes, images, sons) à partir de données existantes.
+
+\vspace{0.3cm}
+
+\onslide<2->
+\textbf{Différence clé :}
+\begin{itemize}
+    \item Systèmes traditionnels : analysent ou classifient
+    \item \textcolor{blue}{Systèmes génératifs : produisent du contenu original}
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<3>
+\textbf{Exemples :}
+\begin{itemize}
+    \item \textbf{Génération de texte :} articles, chatbots
+    \item \textbf{Génération d'images :} œuvres d'art (DALL-E, Stable Diffusion)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Multimodalité}
+
+\textbf{L'IA générative peut traiter différents types de données :}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item<+-> \textbf{Texte $\rightarrow$ Image}
+        \begin{itemize}
+            \item Créer une image à partir d'une description textuelle
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Image $\rightarrow$ Texte}
+        \begin{itemize}
+            \item Description automatique d'images
+            \item Exemple : "une image montre un chien jouant dans un parc"
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Autres modalités}
+        \begin{itemize}
+            \item Génération de voix ou de musique à partir de texte
+        \end{itemize}
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<4>
+\begin{exampleblock}{Exemple concret}
+Prompt : \textit{"un paysage montagneux au coucher de soleil, style impressionniste"} $\rightarrow$ génération d'une image correspondante
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}{Capacités}
+
+\textbf{Génération de texte :}
+\begin{itemize}
+    \item Texte cohérent et contextuel
+    \item Rédaction, traduction, résumé
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<2->
+\textbf{Génération d'images :}
+\begin{itemize}
+    \item Images haute résolution
+    \item Respect de prompts complexes
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<3>
+\textbf{Applications variées :}
+\begin{itemize}
+    \item Aide à la rédaction
+    \item Création artistique
+    \item Assistance médicale
+    \item Et bien d'autres...
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Technologies sous-jacentes}
+
+\begin{enumerate}
+    \item<+-> \textbf{Transformers}
+        \begin{itemize}
+            \item Architecture basée sur l'attention
+            \item Capture le contexte dans les séquences
+            \item Traite texte et images
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Modèles de diffusion}
+        \begin{itemize}
+            \item Technique récente
+            \item Images de haute qualité
+            \item Exemple : Stable Diffusion
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Grandeur des données}
+        \begin{itemize}
+            \item Énormes quantités de données nécessaires
+            \item Entraînement intensif
+        \end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Techniques d'entraînement}
+
+\begin{itemize}
+    \item<+-> \textbf{Fine-tuning}
+        \begin{itemize}
+            \item Adapter un modèle pré-entraîné à une tâche spécifique
+            \item Exemple : entraîner sur des données médicales
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Apprentissage par renforcement}
+        \begin{itemize}
+            \item Améliorer via récompenses
+            \item Feedback humain pour améliorer la qualité
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Modèles multimodaux}
+        \begin{itemize}
+            \item Intégrer plusieurs types de données
+            \item Texte + image pour tâches complexes
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Bénéfices de l'IA générative}
+
+\begin{itemize}
+    \item<+->[\colormark{green}] \textbf{Productivité accrue}
+        \begin{itemize}
+            \item[\textcolor{white}{x}] Automatisation des tâches répétitives ou créatives
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+->[\colormark{green}] \textbf{Accessibilité}
+        \begin{itemize}
+            \item[\textcolor{white}{x}] Démocratisation de la création de contenu
+            \item[\textcolor{white}{x}] Pas de compétences techniques requises
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+->[\colormark{green}] \textbf{Applications innovantes}
+        \begin{itemize}
+            \item[\textcolor{white}{x}] Aide à la recherche scientifique
+            \item[\textcolor{white}{x}] Éducation personnalisée
+            \item[\textcolor{white}{x}] Nouvelles formes de création
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Risques de l'IA générative}
+
+\begin{itemize}
+    \item<+->[\colorwarning{red}] \textbf{Désinformation}
+        \begin{itemize}
+            \item[\textcolor{white}{x}] Génération de faux contenus
+            \item[\textcolor{white}{x}] Deepfakes, articles fake news
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+->[\colorwarning{red}] \textbf{Biais et discrimination}
+        \begin{itemize}
+            \item[\textcolor{white}{x}] Reproduction des biais des données d'entraînement
+            \item[\textcolor{white}{x}] Exemple : stéréotypes de genre
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+->[\colorwarning{red}] \textbf{Propriété intellectuelle}
+        \begin{itemize}
+            \item[\textcolor{white}{x}] Qui détient les droits sur un contenu généré par IA ?
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+->[\colorwarning{red}] \textbf{Impact sur l'emploi}
+        \begin{itemize}
+            \item[\textcolor{white}{x}] Automatisation de tâches humaines
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Qu'est-ce que l'AGI ?}
+\framesubtitle{Artificial General Intelligence}
+
+\textbf{Quid de l'AGI :}
+
+\vspace{0.3cm}
+
+Système d'IA capable de \textbf{raisonner et d'apprendre dans n'importe quel domaine}, avec une intelligence comparable à celle d'un humain.
+
+\vspace{0.5cm}
+
+\onslide<2>
+\textbf{Différence avec l'IA générative :}
+
+\begin{itemize}
+    \item \textcolor{red}{IA générative :} spécialisée (texte, images)
+    \item \textcolor{blue}{AGI :} intelligence générale, polyvalente
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{État actuel de la recherche sur l'AGI}
+
+\begin{itemize}
+    \item<+->\colorwarning{red} \textbf{Pas de consensus scientifique}
+        \begin{itemize}
+            \item Faisabilité : débattue
+            \item Proximité : opinions divergentes
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+->\colorwarning{red} \textbf{Influences économiques}
+        \begin{itemize}
+            \item Débats influencés par investissements
+            \item Course technologique
+            \item Considérations économiques $>$ preuves scientifiques
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+->\colorwarning{red} \textbf{Opinions des experts divisées}
+        \begin{itemize}
+            \item Certains : encore très loin
+            \item D'autres : progrès rapides possibles
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Message clé sur l'AGI}
+
+\begin{block}{Points importants}
+\begin{itemize}
+    \item L'IA générative est \textcolor{red}{loin d'atteindre l'AGI}
+    \item \textcolor{red}{Pas de consensus scientifique} sur :
+        \begin{itemize}
+            \item La faisabilité de l'AGI
+            \item L'utilité de l'AGI
+        \end{itemize}
+    \item Discussions souvent guidées par :
+        \begin{itemize}
+            \item Intérêts économiques
+            \item Marketing et course technologique
+        \end{itemize}
+\end{itemize}
+\end{block}
+
+\vspace{0.3cm}
+
+\textbf{Rester critique et factuel face aux annonces sur l'AGI}
+
+\end{frame}
+
+\begin{frame}{Conclusion}
+
+\textbf{Résumé :}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item L'IA générative est une \textcolor{blue}{technologie puissante}
+    \item Limitée à des \textbf{tâches spécifiques}
+    \item Nombreux bénéfices mais aussi \textcolor{red}{défis éthiques et techniques}
+    \item L'AGI reste un \textbf{objectif lointain}
+        \begin{itemize}
+            \item Sans consensus sur sa faisabilité ou son utilité
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Questions ouvertes}
+
+\begin{enumerate}
+    \item Comment maximiser les bénéfices tout en minimisant les risques de l'IA générative ?
+
+    \vspace{0.3cm}
+    \item Faut-il réguler le développement de l'IA générative ? Si oui, comment ?
+
+    \vspace{0.3cm}
+    \item Que pensez-vous des prédictions sur l'AGI : objectif réaliste ou utopie/dystopie lointaine ?
+\end{enumerate}
+
+\end{frame}
+

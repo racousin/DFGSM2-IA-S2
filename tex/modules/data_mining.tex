@@ -1,0 +1,674 @@
+\section{Fouille de Données}
+
+\begin{frame}
+\frametitle{Introduction à la Fouille de Données}
+\framesubtitle{Data Mining}
+
+\textbf{Définition}
+
+\vspace{0.3cm}
+
+La fouille de données est le processus d'\textbf{extraction de connaissances} implicites, utiles et compréhensibles à partir de grandes quantités de données.
+
+\vspace{0.3cm}
+
+\textbf{Elle combine :}
+\begin{itemize}
+    \item Statistiques
+    \item Intelligence artificielle (apprentissage automatique)
+    \item Visualisation
+    \item Algorithmes de recherche de motifs
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Historique du Data Mining}
+
+\begin{itemize}
+    \item<+-> \textbf{Années 1960-1970}
+        \begin{itemize}
+            \item Développement des bases de données relationnelles (SQL)
+            \item Premières techniques d'analyse statistique
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Années 1980-1990}
+        \begin{itemize}
+            \item Boom avec l'augmentation des volumes de données
+            \item Augmentation de la puissance de calcul
+            \item Apparition du terme "data mining" dans les années 1990
+            \item Popularisé par le projet KDD (Knowledge Discovery in Databases)
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Années 2000 à aujourd'hui}
+        \begin{itemize}
+            \item Intégration avec l'IA et le big data
+            \item Démocratisation : outils accessibles (Python, R, Tableau)
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Applications : Finance}
+
+\textbf{Problème :} Détection de fraudes dans les transactions bancaires
+
+\vspace{0.3cm}
+
+\textbf{Solution :}
+\begin{itemize}
+    \item<+-> Clustering pour identifier les comportements inhabituels
+        \begin{itemize}
+            \item Exemple : dépenses soudaines anormales
+        \end{itemize}
+    \item<+-> Modèles de classification pour prédire si une transaction est frauduleuse
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<2>
+\textbf{Algorithmes utilisés :}
+\begin{itemize}
+    \item Arbres de décision
+    \item Réseaux de neurones
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Applications : Santé}
+
+\textbf{Problème :} Prédiction des risques de maladies chroniques
+
+\vspace{0.3cm}
+
+\textbf{Solution :}
+\begin{itemize}
+    \item<+-> Analyse de dossiers médicaux
+        \begin{itemize}
+            \item Identifier des corrélations entre symptômes et diagnostics
+        \end{itemize}
+    \item<+-> Visualisation des résultats pour aider les médecins
+        \begin{itemize}
+            \item Exemple : heatmaps des zones à risque dans une population
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Applications : Marketing}
+
+\textbf{Problème :} Segmentation des clients pour personnaliser les offres
+
+\vspace{0.3cm}
+
+\textbf{Solution :}
+\begin{itemize}
+    \item<+-> \textbf{Clustering (k-means)}
+        \begin{itemize}
+            \item Regrouper les clients selon leurs comportements d'achat
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Règles d'association}
+        \begin{itemize}
+            \item Identifier des produits souvent achetés ensemble
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Applications : Retail et Industrie}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+    \colormark{blue}\textbf{Retail :}
+    \begin{itemize}
+        \item \textbf{Problème :} Optimisation des stocks et prévision des ventes
+        \item \textbf{Solution :}
+        \begin{itemize}
+            \item Séries temporelles pour prédire la demande
+            \item Analyse de paniers d'achat
+        \end{itemize}
+    \end{itemize}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+    \onslide<2>
+    \colormark{blue}\textbf{Industrie :}
+    \begin{itemize}
+        \item \textbf{Problème :} Maintenance prédictive des machines
+        \item \textbf{Solution :}
+        \begin{itemize}
+            \item Analyse des données de capteurs
+            \item Réduction de dimensionnalité (PCA)
+        \end{itemize}
+    \end{itemize}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Méthodologie : CRISP-DM}
+\framesubtitle{Cross-Industry Standard Process for Data Mining}
+
+\textbf{Une approche structurée en 6 étapes :}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+    \item Compréhension du problème métier
+    \item Compréhension des données
+    \item Préparation des données
+    \item Modélisation
+    \item Évaluation
+    \item Déploiement et maintenance
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{CRISP-DM : 1. Compréhension du problème}
+
+\textbf{Objectif :} Définir clairement le problème à résoudre
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item Exemple : "Comment réduire le taux d'attrition des clients ?"
+    \item Impliquer les parties prenantes
+    \item Définir un objectif clair et actionnable
+\end{itemize}
+
+\vspace{0.5cm}
+
+\onslide<2>
+\textbf{Importance de la formulation de la question :}
+
+\vspace{0.2cm}
+
+\begin{itemize}
+    \item \textcolor{red}{Mauvaise question :} "Quelles sont les tendances de nos ventes ?"
+        \begin{itemize}
+            \item Trop vague, difficile à actionner
+        \end{itemize}
+    \item \textcolor{green}{Bonne question :} "Quels produits ont un taux de retour élevé et quels facteurs (taille, couleur, saison) y contribuent ?"
+        \begin{itemize}
+            \item Permet d'identifier des leviers d'amélioration
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{CRISP-DM : 2. Compréhension des données}
+
+\textbf{Exploration (EDA) :}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item<+-> Analyser la distribution des données
+    \item<+-> Identifier les valeurs manquantes ou aberrantes
+    \item<+-> Visualisation : graphiques
+        \begin{itemize}
+            \item Histogrammes
+            \item Boxplots
+            \item Heatmaps
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{CRISP-DM : 3. Préparation des données}
+
+\textbf{Nettoyage :}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item<+-> Gestion des valeurs manquantes
+        \begin{itemize}
+            \item Imputation
+            \item Suppression
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> Normalisation
+        \begin{itemize}
+            \item Mise à l'échelle pour algorithmes (ex : k-means)
+        \end{itemize}
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<2>
+\textbf{Transformation :}
+\begin{itemize}
+    \item Création de nouvelles variables
+    \item Exemples : ratio, catégories
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{CRISP-DM : 4. Modélisation}
+
+\textbf{Choix du modèle en fonction du problème :}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item<+-> \textbf{Classification} : prédire une catégorie
+        \begin{itemize}
+            \item Exemple : spam/non-spam
+            \item Algorithmes : Arbres de décision, SVM, Réseaux de neurones
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Régression} : prédire une valeur continue
+        \begin{itemize}
+            \item Exemple : prix d'une maison
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Clustering} : regrouper des données sans étiquettes
+        \begin{itemize}
+            \item Exemple : segmentation client
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Règles d'association} : trouver des motifs
+        \begin{itemize}
+            \item Exemple : "30\% des clients qui achètent X achètent aussi Y"
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{CRISP-DM : 5. Évaluation}
+
+\textbf{Métriques adaptées :}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item<+-> \textbf{Classification :}
+        \begin{itemize}
+            \item Précision
+            \item Rappel
+            \item F1-score
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Régression :}
+        \begin{itemize}
+            \item RMSE (Root Mean Squared Error)
+        \end{itemize}
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<2>
+\textbf{Validation croisée :}
+\begin{itemize}
+    \item Pour éviter le surfitement (overfitting)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{CRISP-DM : 6. Déploiement}
+
+\textbf{Déploiement et maintenance :}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item<+-> Intégration du modèle dans un système opérationnel
+    \item<+-> Surveillance continue
+        \begin{itemize}
+            \item Détecter la dérive des données
+            \item Détecter la perte de performance
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Limites : Problèmes courants}
+
+\begin{enumerate}
+    \item<+-> \textbf{Mauvaise formulation de la question}
+        \begin{itemize}
+            \item Risque : résultats inutiles ou non actionnables
+            \item Solution : Co-construction avec les métiers
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Données insuffisantes ou de mauvaise qualité}
+        \begin{itemize}
+            \item Problème du "rare event" : cas rares nécessitent beaucoup de données
+            \item Biais dans les données
+            \item Exemple : modèle de recrutement biaisé
+        \end{itemize}
+
+    \vspace{0.2cm}
+    \item<+-> \textbf{Surfitement (overfitting)}
+        \begin{itemize}
+            \item Le modèle mémorise mais ne généralise pas
+            \item Solution : validation croisée, régularisation
+        \end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Limites : Interprétabilité}
+
+\textbf{Problème :}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item Certains algorithmes sont des "boîtes noires"
+    \item Exemple : réseaux de neurones profonds
+\end{itemize}
+
+\vspace{0.5cm}
+
+\onslide<2>
+\textbf{Solution :}
+\begin{itemize}
+    \item Privilégier des modèles explicables quand c'est possible
+    \item Arbres de décision
+    \item Régression linéaire
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Bonnes pratiques}
+
+\small
+\begin{tabular}{|p{3.5cm}|p{3cm}|p{3cm}|}
+\hline
+\textbf{Bonne pratique} & \textbf{Description} & \textbf{Exemple} \\
+\hline
+Question claire et actionnable & Impliquer les parties prenantes & "Réduire coûts logistiques de 10\% sans impacter satisfaction" \\
+\hline
+Qualité des données & Nettoyer et valider avant analyse & Supprimer doublons, imputer valeurs manquantes \\
+\hline
+Validation robuste & Cross-validation pour généralisation & Diviser données en 5 folds \\
+\hline
+Documentation & Documenter chaque étape & Notebooks Jupyter commentés \\
+\hline
+Éthique et transparence & Auditer pour éviter biais & Vérifier non-discrimination \\
+\hline
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}{Collecte de données : Sources}
+
+\textbf{1. Données structurées}
+\begin{itemize}
+    \item Bases de données relationnelles (SQL)
+    \item Fichiers CSV/Excel
+    \item Exemple : bases clients, transactions
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<2->
+\textbf{2. Données non structurées}
+\begin{itemize}
+    \item Textes (emails, avis clients)
+    \item Images, vidéos
+    \item Exemple : analyse de sentiments (text mining)
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<3>
+\textbf{3. Données externes}
+\begin{itemize}
+    \item Open data (INSEE, Eurostat)
+    \item APIs (météo, trafic)
+    \item Web scraping (respecter RGPD)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Collecte de données : Défis}
+
+\textbf{Accès et légalité :}
+\begin{itemize}
+    \item Respecter les réglementations (RGPD)
+    \item Obtenir les droits d'utilisation
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<2->
+\textbf{Nettoyage et préparation :}
+\begin{itemize}
+    \item Données bruitées, incohérentes, manquantes
+    \item Techniques : imputation, suppression des doublons, normalisation
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<3>
+\textbf{Intégration :}
+\begin{itemize}
+    \item Fusionner des données de sources différentes
+    \item Exemple : données internes + données marché
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Algorithmes spécifiques au data mining}
+
+\begin{enumerate}
+    \item<+-> \textbf{Règles d'association}
+        \begin{itemize}
+            \item Découvrir des associations entre variables
+            \item Exemple : catégorie socio-professionnelle vs certains produits
+            \item Utilisé en marketing pour recommandations
+        \end{itemize}
+
+    \vspace{0.3cm}
+    \item<+-> \textbf{Détection d'anomalies}
+        \begin{itemize}
+            \item Identifier des observations rares ou suspectes
+            \item Exemple : fraudes bancaires
+            \item Techniques : isolation forest, auto-encoders
+        \end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Cas pratique : Optimisation supermarché}
+\framesubtitle{Réduire le gaspillage et optimiser les promotions}
+
+\textbf{Scénario :}
+
+\vspace{0.2cm}
+
+Vous travaillez pour un supermarché qui souhaite :
+\begin{itemize}
+    \item Optimiser ses promotions
+    \item Réduire le gaspillage alimentaire
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Comment aborderiez-vous ce problème ?}
+
+\end{frame}
+
+\begin{frame}{Cas pratique : 1. Formulation de la question}
+
+\textbf{Questions à poser :}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item "Quels produits ont un taux de retour élevé (gaspillage) ?"
+    \item "Quels facteurs y contribuent ?"
+        \begin{itemize}
+            \item Prix
+            \item Saison
+            \item Emplacement en rayon
+        \end{itemize}
+    \item "Quelles promotions croisées maximisent les ventes ?"
+        \begin{itemize}
+            \item Exemple : fromage + vin
+            \item Sans impacter la marge
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Cas pratique : 2-3. Collecte et Préparation}
+
+\textbf{Collecte des données :}
+\begin{itemize}
+    \item Données internes : ventes, stocks, promotions passées
+    \item Données externes : météo, événements locaux
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<2>
+\textbf{Préparation :}
+\begin{itemize}
+    \item Nettoyage : supprimer transactions incomplètes
+    \item Imputer valeurs manquantes
+    \item Créer nouvelles variables :
+        \begin{itemize}
+            \item Ratio gaspillage = (stock final - ventes) / stock initial
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Cas pratique : 4. Modélisation}
+
+\textbf{Pour le gaspillage :}
+\begin{itemize}
+    \item<+-> Régression pour prédire le taux de gaspillage
+        \begin{itemize}
+            \item En fonction du prix et de la saison
+        \end{itemize}
+    \item<+-> Clustering pour segmenter les produits
+        \begin{itemize}
+            \item Selon sensibilité au gaspillage
+        \end{itemize}
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<3>
+\textbf{Pour les promotions croisées :}
+\begin{itemize}
+    \item Règles d'association
+        \begin{itemize}
+            \item Trouver produits souvent achetés ensemble
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Cas pratique : 5-6. Évaluation et Déploiement}
+
+\textbf{Évaluation :}
+\begin{itemize}
+    \item Pour la régression : RMSE pour mesurer l'erreur
+    \item Pour les règles d'association : support, confidence, lift
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<2>
+\textbf{Déploiement :}
+\begin{itemize}
+    \item Recommander promotions ciblées
+        \begin{itemize}
+            \item "Achetez le fromage et obtenez 20\% sur le vin"
+        \end{itemize}
+    \item Mettre en place un tableau de bord
+        \begin{itemize}
+            \item Suivre l'impact des promotions
+        \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Outils et ressources}
+
+\textbf{Pour la visualisation :}
+\begin{itemize}
+    \item Tableau, Power BI (drag-and-drop)
+    \item Idéal pour les non-techniciens
+\end{itemize}
+
+\vspace{0.3cm}
+
+\onslide<2->
+\textbf{Pour le nettoyage et l'analyse :}
+\begin{itemize}
+    \item Excel (formules avancées, Power Query)
+    \item Python : Pandas, Matplotlib/Seaborn, Scikit-learn
+    \item R : analyses statistiques avancées
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Conclusion : Points clés}
+
+\textbf{Bonnes pratiques à retenir :}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+    \item \textbf{Poser la bonne question}
+
+    Impliquer les métiers, objectif clair et actionnable
+
+    \item \textbf{Travailler avec des données de qualité}
+    
+    Nettoyage rigoureux, gestion des valeurs manquantes
+
+    \item \textbf{Évaluer correctement les modèles}
+    
+    Validation croisée, métriques adaptées
+
+    \item \textbf{Documenter et expliquer}
+    
+    Modèle compréhensible par tous
+
+    \item \textbf{Penser à l'éthique}
+    
+    Auditer les données pour éviter les biais
+
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Message final}
+
+\textbf{Le data mining n'est pas une magie}
+
+\vspace{0.3cm}
+
+C'est un processus structuré qui repose sur :
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item Une \textcolor{blue}{bonne formulation du problème}
+    \item Des \textcolor{blue}{données propres et représentatives}
+    \item Des \textcolor{blue}{méthodes adaptées}
+    \item Et une \textcolor{blue}{évaluation rigoureuse}
+\end{itemize}
+
+\vspace{0.5cm}
+
+En suivant ces bonnes pratiques, même sans expertise technique avancée, il est possible de tirer des insights puissants pour innover et prendre des décisions éclairées.
+
+\end{frame}
