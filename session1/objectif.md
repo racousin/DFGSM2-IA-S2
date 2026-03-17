@@ -14,3 +14,18 @@ preáprer un tp a remplir (sachant que ils savent )
 - eval sur https://github.com/yzerlaut/medical_datasets/blob/main/kidney/kidney_stone_train.csv
 
 
+
+
+### 17-03
+- remmove cross validation and tunning grid search
+- update naming TP1
+- check dataset
+- update name features session3 https://www.kaggle.com/datasets/ritwikb3/heart-disease-statlog
+
+
+- find dataset, classification. Multi features.
+
+- Yann cours session1 et session2
+- Raphael cours session3 
+
+30-50 slides en francais / + latex
