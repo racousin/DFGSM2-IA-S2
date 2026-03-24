@@ -29,3 +29,23 @@ preáprer un tp a remplir (sachant que ils savent )
 - Raphael cours session3 
 
 30-50 slides en francais / + latex
+
+### 24-03
+- slide session 1, focus sur tabular data (garder ouverture image, text pour module 3)
+- regularisation (deplacer cours 2 si il y a de la place)
+
+- module 3 : add descent de gradient, open 
+- tp3, mettre a jour derneir retour du l2 math
+- session1 et 2 tps, refaire , valider, corriger typo
+- pour evaluation, envoyer message a Ferdiand pour valider le dataset
+/presentation : 10 min pres/ 5 min (/10 min) question individuel avec questions (1-2 slides)
+2 groupes (1 ML 1 medecin):
+- presente le probleme
+- methodologie (evluation et objectif)
+- preprocessing
+- model
+- problem rencontré / suite
+
+-> jeudi soir, 
+
+-> a preciser/formaliser
