@@ -1,7 +1,7 @@
 [project]
-name = "l2math"
+name = "dfgsm2-ia-s2"
 version = "0.1.0"
-description = ""
+description = "Introduction to Machine Learning for Medical Students (DFGSM2)"
 authors = [
     {name = "Raphael Cousin",email = "racousin@student.42.fr"}
 ]
@@ -15,10 +15,6 @@ dependencies = [
     "seaborn (>=0.13.2,<0.14.0)",
     "numpy (>=1.26.0)"
 ]
-
-
-[[tool.poetry.packages]]
-include = "l2math"
 
 
 [build-system]

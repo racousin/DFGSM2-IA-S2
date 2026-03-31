@@ -6,9 +6,9 @@
 
 | Session | Topic | Notebook |
 |---------|-------|----------|
-| **Session 1** | Classification & Logistic Regression (Breast Cancer) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/racousin/L2Math/blob/main/session1/tp1.ipynb) |
-| **Session 2** | Data Preparation & Random Forest (Breast Cancer with noise) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/racousin/L2Math/blob/main/session2/tp1.ipynb) |
-| **Session 3** | Neural Networks & Model Comparison (Heart Disease) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/racousin/L2Math/blob/main/session3/tp1.ipynb) |
+| **Session 1** | Classification & Logistic Regression (Breast Cancer) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/racousin/DFGSM2-IA-S2/blob/main/session1/tp1.ipynb) |
+| **Session 2** | Data Preparation & Random Forest (Breast Cancer with noise) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/racousin/DFGSM2-IA-S2/blob/main/session2/tp1.ipynb) |
+| **Session 3** | Neural Networks & Model Comparison (Heart Disease) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/racousin/DFGSM2-IA-S2/blob/main/session3/tp1.ipynb) |
 
 ## Session Progression
 
