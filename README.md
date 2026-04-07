@@ -1,3 +1,5 @@
+Discord link https://discord.gg/mSPa8grs
+
 # DFGSM2 — Introduction to Machine Learning for Medical Students
 
 3 practical sessions (TP) for 2nd-year medical students. Each session builds on the previous one, following a real ML methodology: **Explore → Visualize → Prepare → Train → Evaluate**.
